@@ -3,7 +3,7 @@
 
 let a: number;
 let b: string;
-let c: any;
+let c: boolean | number;
 
 a = 5;
 b = "texto";
@@ -13,7 +13,7 @@ if (Math.random() >= 0.5) {
   c = 100;
 }
 
-function d(param1, param2: number) {
+function d(param1: number, param2: number | boolean): number | string {
   if (typeof param2 === "number") {
     return param1 + param2;
   } else {
